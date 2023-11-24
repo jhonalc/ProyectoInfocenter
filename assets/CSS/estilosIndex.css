@@ -1,0 +1,142 @@
+*{
+    padding: 5px;
+    margin: 5px;
+}
+/*Estilos para el encabezado del Index*/
+.encabezado {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 45px;
+}
+.contenedor {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 7px;
+    text-decoration: none;
+}
+.contenedor .conten_1{
+    width: 10%;
+}
+.contenedor .conten_1 a{
+    text-decoration: none;
+    color: black;
+}
+.contenedor .conten_menu{
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 30px;
+    font-weight: bold;
+}
+.contenedor .conten_menu a{
+    text-decoration: none;
+    color: #000;
+}
+/*Estilos para el bloque principal del Index*/
+.principal {
+    display: flex;
+    justify-content: space-around;
+}
+/*Estilos para el carrusel -- traido desde bootstrap*/
+.carrusel h4{
+text-align: center;
+font-weight: bold;
+text-decoration: underline;
+}
+.tarjetas {
+    width: 50%;
+}
+.tarjetas .cuidados {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.tarjetas .viajes {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.tarjetas .recetas {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.tarjetas .notas {
+    width: 50%;
+    text-align: justify;
+}
+.img{
+    width: 40%;
+}
+.formularioCitas {
+    width: 40%;
+}
+footer{
+    color: #111;
+    background-color: #fff;
+    padding-top: 20px;
+}
+ 
+.container-footer {
+    width: 1140px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+.footer-content{
+    width: 33.3%;
+}
+ 
+h3{
+    font-size: 28px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+.footer-content p{
+    width: 250px;
+    margin: auto;
+    padding: 7px;
+}
+.footer-content ul{
+    text-align: center;
+}
+.list{
+    padding: 0;
+}
+.list li{
+    width: auto;
+    text-align: center;
+    list-style-type: none;
+    padding: 7px;
+    position: relative;
+}
+.footer-content a{
+    text-decoration: none;
+    color: black;
+}
+.redes{
+    text-align: center;
+    padding: 0;
+}
+ 
+.redes li{
+    display: inline-block;
+    text-align: center;
+    padding: 1px;
+}
+ 
+.copy{
+    background-color: #313bc6;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 50px;
+}
+.copy p{
+    color: white;
+    margin: 0;
+    font-size: 16px;
+    padding: 7px;
+}
