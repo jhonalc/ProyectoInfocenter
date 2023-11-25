@@ -2,15 +2,19 @@
 require_once "conexion.php";
 $conexion = new Conexion();
 //Recibir los datos POST
-$mascota = $_POST["mascota"];
+$tipoMascota = $_POST["tipoMascota"];
+$nombreMascota = $_POST["nombreMascota"];
 $edad = $_POST["edad"];
 $idRaza = $_POST["idRaza"];
 $fecha = $_POST["fecha"];
 $hora = $_POST["hora"];
-$amo = $_POST["amo"];
+$nombreAmo = $_POST["nombreAmo"];
+$apellidoAmo = $_POST["apellidoAmo"];
+$tipoIdentificacion = $_POST["tipoIdentificacion"];
+
  
-$consulta = "INSERT INTO citasmedicas(mascota, edad, idRaza, fecha, hora, amo)
-VALUES('{$mascota}', '{$edad}', '{$idRaza}', '{$fecha}', '{$hora}', '{$amo}');";
+$consulta = "INSERT INTO citasmedicas(tipoMascota, nombreMascota, edad, idRaza, fecha, hora, nombreAmo, apellidoAmo, tipoIdentificacion)
+VALUES('{$tipoMascota}', '{$nombreMascota}', '{$edad}', '{$idRaza}', '{$fecha}', '{$hora}', '{$nombreAmo}', '{$apellidoAmo}', '{$tipoIdentificacion}');";
  
 $res = $conexion->enviarDatos($consulta);
 if($res == true){
