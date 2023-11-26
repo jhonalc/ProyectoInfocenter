@@ -1,6 +1,6 @@
 // cargue el documento ready
 $(document).ready(function(){
-    //alert("Ajax");
+    alert("Ajax");
     getRazas();
 });
 function getRazas(){

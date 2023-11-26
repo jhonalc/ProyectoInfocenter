@@ -7,6 +7,10 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://fontawesome.com/v4/icons/">
     <link rel="stylesheet" href="../CSS/estilosIndex.css">
+    <script src="../../assets/JS/jquery.min.js"></script>
+    <script src="../../assets/JS/peticionesAjax.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 </head>
 <body>
@@ -108,8 +112,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="formularioCitas">
-                    <form>
+                <div id="formulario">
+                    <form action="" method="post" id="formularioCita">
                         <h1>Solicitar cita médica</h1>
                         <h3>Información de la mascota</h3>
                         <div class="mb-3">
@@ -129,11 +133,13 @@
                         </div>
                         <div class="mb-3">
                             <label for="" class="form-label">Raza</label>
-                            <select class="form-select" aria-label="Default select example">
+                            <select class="form-select" aria-label="Default select example" name="razas">
                                 <option selected>Por favor seleccione la raza</option>
+                                <!--
                                 <option value="1">One</option>
                                 <option value="2">Two</option>
                                 <option value="3">Three</option>
+                                -->
                             </select>
                         </div>
                         <h3>Información cita</h3>
@@ -145,9 +151,7 @@
                             <label for="" class="form-label">Hora</label>
                             <input type="time" class="form-control" id="horaCita">
                         </div>
-                        <div class="mb-3 form-check">
-                          <input type="checkbox" class="form-check-input" id="checkboxUrgente">
-                        </div>
+
                         <h3>Información propietario</h3>
                         <div class="mb-3">
                             <label for="" class="form-label">Nombres</label>
@@ -224,5 +228,14 @@
         </div> 
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function(){
+            $("#razas").select2({
+                placeholder: 'Seleccione una raza',
+                allowClear: true,
+                with: '100%'
+            })
+        })
+    </script>
 </body>
 </html>
