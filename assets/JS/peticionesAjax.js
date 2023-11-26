@@ -3,7 +3,6 @@ $(document).ready(function(){
     //alert("Ajax");
     getRazas();
 });
- 
 function getRazas(){
     //console.log("Función");
     $.ajax({
