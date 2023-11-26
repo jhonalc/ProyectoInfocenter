@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Promociones</title>
+    <title>Promociones Michi & Firu</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://fontawesome.com/v4/icons/">
     <link rel="stylesheet" href="../CSS/estilosIndex.css">
@@ -40,19 +40,23 @@
                   <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
                   <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
                   <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4" aria-label="Slide 5"></button>
                 </div>
                 <div class="carousel-inner">
                   <div class="carousel-item active" id="contenedoImagenCarrusel">
-                    <img src="../IMG/carrusel/banner_perros_y_gatos.png"  width="100%"  alt="...">
+                    <img src="../IMG/carruselProdutos/banner_alimentoMascotas_1.png"  width="100%"  alt="...">
                   </div>
                   <div class="carousel-item">
-                    <img src="../IMG/carrusel/banner_perros.png" width="100%" alt="...">
+                    <img src="../IMG/carruselProdutos/banner_alimentoMascotas_2.png" width="100%" alt="...">
                   </div>
                   <div class="carousel-item">
-                    <img src="../IMG/carrusel/banner_perros2.png" width="100%" alt="...">
+                    <img src="../IMG/carruselProdutos/banner_alimentoMascotas_3.png" width="100%" alt="...">
                   </div>
                   <div class="carousel-item">
-                    <img src="../IMG/carrusel/banner_gatos.png" width="100%" alt="...">
+                    <img src="../IMG/carruselProdutos/banner_alimentoMascotas_4.png" width="100%" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="../IMG/carruselProdutos/banner_alimentoMascotas_5.png" width="100%" alt="...">
                   </div>
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
@@ -70,114 +74,65 @@
         </section>
 
         <section id = "principal">
-            <div class = "principal">
-                <div class="tarjetas">
-                    <div class="cuidados">
-                        <div class ="notas">
-                            <h5>Cuidados para tu mascota</h5>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam sapiente eaque dolorum quasi ullam asperiores a aspernatur atque! Sapiente quia laudantium odit minima excepturi quis consequatur porro pariatur minus officiis.</p>
-                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos ipsam culpa, eligendi totam dignissimos laborum, harum nesciunt ipsa dolorum ut et porro recusandae assumenda. Eligendi reiciendis excepturi tenetur consequuntur asperiores!</p>
-                            <a href="cuidados.html">Ver mas...</a>
-                        </div>
-                        <div class = "img">
-                            <img src="../IMG/logo.jpg" width="100%" height="100%" alt="">
-                        </div>
-                    </div>
-                    <div class="viajes">
-                        <div class ="notas">
-                            <h5>Recomendaciones de Viaje</h5>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam sapiente eaque dolorum quasi ullam asperiores a aspernatur atque! Sapiente quia laudantium odit minima excepturi quis consequatur porro pariatur minus officiis.</p>
-                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos ipsam culpa, eligendi totam dignissimos laborum, harum nesciunt ipsa dolorum ut et porro recusandae assumenda. Eligendi reiciendis excepturi tenetur consequuntur asperiores!</p>
-                            <a href="viajes.html">Ver mas...</a>
+            <p>Descuentos en nuestros Productos</p>
+            <div class="principal">
+                <table class="table">
+                    <thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="card" style="width: 18rem;">
+                                    <img src="../IMG/productos/PRODUCTOS5.png" class="card-img-top" alt="Alimentos para mascotas Virbac">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Card title</h5>
+                                        <p class="card-text">
+                                            Some quick example text to build on the card title
+                                        </p>
+                                        <button type="button" class="btn btn-primary">Agregar al Carrito</button>
 
-                        </div>
-                        <div class="img">
-                            <img src="../IMG/logo.jpg" width="100%" height="100%" alt="">
-                        </div>
-                    </div>
-                    <div class="recetas">
-                        <div class ="notas">
-                            <h5>Recetas para tu mascota</h5>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam sapiente eaque dolorum quasi ullam asperiores a aspernatur atque! Sapiente quia laudantium odit minima excepturi quis consequatur porro pariatur minus officiis.</p>
-                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos ipsam culpa, eligendi totam dignissimos laborum, harum nesciunt ipsa dolorum ut et porro recusandae assumenda. Eligendi reiciendis excepturi tenetur consequuntur asperiores!</p>
-                            <a href="recetas.html">Ver mas...</a>
-                        </div>
-                        <div class = "img">
-                            <img src="../IMG/logo.jpg" width="100%" height="100%" alt="">
-                        </div>
-                    </div>
-                </div>
-                <div class="formularioCitas">
-                    <form>
-                        <h1>Solicitar cita médica</h1>
-                        <h3>Información de la mascota</h3>
-                        <div class="mb-3">
-                          <label for="" class="form-label">Mascota</label>
-                          <select class="form-select" aria-label="Default select example">
-                            <option selected>Por favor seleccione su tipo de mascota</option>
-                            <option value="1">Perro</option>
-                            <option value="2">Gato</option>
-                            <option value="3">Ave</option>
-                          </select>
-                        <div class="mb-3">
-                          <label for="" class="form-label">Nombre</label>
-                          <input type="text" class="form-control" id="nombreMascosta">
-                        </div>
-                        <div class="mb-3">
-                            <label for="" class="form-label">Edad</label>
-                            <input type="number" class="form-control" id="edadMascota">
-                        </div>
-                        <div class="mb-3">
-                            <label for="" class="form-label">Raza</label>
-                            <select class="form-select" aria-label="Default select example">
-                                <option selected>Por favor seleccione la raza</option>
-                                <option value="1">One</option>
-                                <option value="2">Two</option>
-                                <option value="3">Three</option>
-                            </select>
-                        </div>
-                        <h3>Información cita</h3>
-                        <div class="mb-3">
-                            <label for="" class="form-label">Fecha</label>
-                            <input type="date" class="form-control" id="fechaCita">
-                        </div>
-                        <div class="mb-3">
-                            <label for="" class="form-label">Hora</label>
-                            <input type="time" class="form-control" id="horaCita">
-                        </div>
-                        <div class="mb-3 form-check">
-                          <input type="checkbox" class="form-check-input" id="checkboxUrgente">
-                        </div>
-                        <h3>Información propietario</h3>
-                        <div class="mb-3">
-                            <label for="" class="form-label">Nombres</label>
-                            <input type="text" class="form-control" id="nombrePropietario">
-                        </div>
-                        <div class="mb-3">
-                            <label for="" class="form-label">Apellidos</label>
-                            <input type="text" class="form-control" id="apellidoPropietario">
-                        </div>
-                        <div class="mb-3">
-                            <label for="" class="form-label">Tipo Identificación</label>
-                            <select class="form-select" aria-label="Default select example">
-                                <option selected>Por favor seleccione su tipo de Identificación</option>
-                                <option value="1">Cédula</option>
-                                <option value="2">Cédula Extranjería</option>
-                                <option value="3">Pasaporte</option>
-                            </select>
-                        </div>
-                        <div class="mb-3">
-                            <label for="" class="form-label">Número Identificación</label>
-                            <input type="number" class="form-control" id="IdentificacionPropietario">
-                        </div>
-                        <button type="button" class="btn btn-success">Success</button>
-                      </form>
-                </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="card" style="width: 18rem;">
+                                    <img src="../IMG/productos/PRODUCTOS6.png" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Card title</h5>
+                                        <p class="card-text">Some quick example text to build on the card title</p>
+                                        <button type="button" class="btn btn-primary">Agregar al Carrito</button>
+
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="card" style="width: 18rem;">
+                                    <img src="../IMG/productos/PRODUCTOS7.png" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Card title</h5>
+                                        <p class="card-text">Some quick example text to build on the card title</p>
+                                        <button type="button" class="btn btn-primary">Agregar al Carrito</button>
+
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="card" style="width: 18rem;">
+                                    <img src="../IMG/productos/PRODUCTOS8.png" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Card title</h5>
+                                        <p class="card-text">Some quick example text to build on the card title</p>
+                                        <button type="button" class="btn btn-primary">Agregar al Carrito</button>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </section>
-        <section id = "videos">
+        <section id = "ubicacion">
             <div>
-
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.948683426448!2d-75.5661395262328!3d6.270479226054441!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e4428e80e411f91%3A0x142ab912fdb68353!2zSmFyZMOtbiBCb3TDoW5pY28gZGUgTWVkZWxsw61u!5e0!3m2!1ses-419!2sco!4v1701024595144!5m2!1ses-419!2sco" width=100% height="400px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
             <div></div>
         </section>
