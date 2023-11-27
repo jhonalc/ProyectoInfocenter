@@ -73,11 +73,13 @@
                         </div>
                         <div class="mb-3">
                             <label for="" class="form-label">Raza</label>
-                            <select class="form-select" aria-label="Default select example" name="razas">
+                            <select class="form-select" aria-label="Default select example" id="razas">
+                                <!--
                                 <option selected>Por favor seleccione la raza</option>
                                 <option value="1">One</option>
                                 <option value="2">Two</option>
                                 <option value="3">Three</option>
+                                -->
                             </select>
                         </div>
                         <h3>Información cita</h3>
@@ -89,17 +91,14 @@
                             <label for="" class="form-label">Hora</label>
                             <input type="time" class="form-control" id="horaCita">
                         </div>
-                        <div class="mb-3 form-check">
-                          <input type="checkbox" class="form-check-input" id="checkboxUrgente">
-                        </div>
                         <h3>Información propietario</h3>
                         <div class="mb-3">
                             <label for="" class="form-label">Nombres</label>
-                            <input type="text" class="form-control" id="nombrePropietario">
+                            <input type="text" class="form-control" id="nombreAmo">
                         </div>
                         <div class="mb-3">
                             <label for="" class="form-label">Apellidos</label>
-                            <input type="text" class="form-control" id="apellidoPropietario">
+                            <input type="text" class="form-control" id="apellidoAmo">
                         </div>
                         <div class="mb-3">
                             <label for="" class="form-label">Tipo Identificación</label>
@@ -168,5 +167,15 @@
         </div> 
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function(){
+            $("#razas").select2({
+                //placeholder: 'Seleccione una raza',
+                allowClear: true,
+                with: '100%'
+            })
+        })
+    </script>
+
 </body>
 </html>

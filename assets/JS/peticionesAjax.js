@@ -1,23 +1,26 @@
 // cargue el documento ready
 $(document).ready(function(){
-    alert("Ajax");
+    //alert("Ajax");
     getRazas();
 });
 function getRazas(){
     //console.log("Función");
     $.ajax({
         method: "POST",
-        url: "api/datosRazas.php",
+        url: "../../api/datosRazas.php",
         dataType: "json"
         //data:
     }).done(function(respuesta){
-        //console.log(respuesta);
+        console.log(respuesta);
         //foreach  jQuery $.each
+        
         $.each(respuesta, function(index, val){
             //console.log(val.raza);
             $("#razas").append("<option value='"+val.id+"'>"+val.raza+"</option>");
         });
-    }).fail(function(error){
+    }).fail(function(xhr, status, error) {
+        var errorMessage = xhr.status + ': ' + xhr.statusText;
+        console.log('Error al obtener datos de razas: ' + errorMessage);
         console.log(error);
     });
 }
@@ -26,13 +29,19 @@ function getRazas(){
 function guardarCita(){
     //alert("haz presioando el botón");
     //validar campos
-    let mascota = $("#mascota").val();
-    if(mascota === ""){
-        alert("Por favor, ingrese el nombre de la mascota.");
+    let tipoMascota = $("#tipoMascota").val();
+    if(tipoMascota === ""){
+        alert("Por favor, Seleccione el tipo de mascota.");
         return;
     }
-    let edad = $("#edad").val();
-    if(edad === ""){
+    let nombreMascota = $("#nombreMascota").val();
+    if(nombreMascota === ""){
+        alert("Por favor, Seleccione el tipo de mascota.");
+        return;
+    }
+
+    let edadMascota = $("#edadMascota").val();
+    if(edadMascota === ""){
         alert("Por favor, ingrese la edad de la mascota.");
         return;
     }
@@ -41,27 +50,27 @@ function guardarCita(){
         alert("Por favor, seleccione una raza.");
         return;
     }
-    let fecha = $("#fecha").val();
-    if(fecha === ""){
+    let fechaCita = $("#fechaCita").val();
+    if(fechaCita === ""){
         alert("Por favor, seleccione la fecha.");
         return;
     }
-    let hora = document.getElementById("hora").value;
-    if(hora===""){
+    let horaCita = document.getElementById("horaCita").value;
+    if(horaCita===""){
         alert("Por favor, seleccione la hora.");
         return;
     }
-    let amo = $("#amo").val();
-    if(amo ===""){
+    let nombreAmo = $("#nombreAmo").val();
+    if(nombreAmo ===""){
         alert("Por favor, ingrese el nombre del amo.");
         return;
     }
     //enviar datos
     $.ajax({
         method: "POST",
-        url: "api/registrarCita.php",
+        url: "../../api/registrarCita.php",
         dataType: "json",
-        data: {"mascota":mascota, "edad":edad, "idRaza":idRaza, "fecha":fecha, "hora":hora, "amo":amo}
+        data: {"tipoMascota":tipoMascota, "nombreMascota":nombreMascota, "edadMascota":edadMascota, "idRaza":idRaza, "fechaCita":fechaCita, "horaCita":horaCita, "nombreAmo":nombreAmo}
     }).done(function(respuesta){
         if(respuesta == "1"){
             alert("Registro exitoso");
