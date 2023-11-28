@@ -5,43 +5,41 @@ class Conexion{
     public $pass;
     public $db_name;
     public $con;
-
-    public function __construct()
-    {
-        //auto conexion
+ 
+    public function __construct(){
+        // auto conexión
         $this->host = "localhost";
         $this->user = "root";
         $this->pass = "";
-        $this->db_name = "michuyfirudb";
-        $this->con = new mysqli($this->host, $this->user, $this->pass, $this->db_name);
-        $this->con->set_charset("utf8");
-
+        $this->db_name= "michuyfirudb";
+        $this->con = new mysqli($this->host, $this->user, $this->pass,
+                                                            $this->db_name);
+        $this->con->set_charset("utf8");// ñ tildes
         if($this->con->connect_error){
             echo "Error al conectar a la base de datos";
         }else{
-            echo "Conexión exitosa";
+            //echo "Conexión exitosa";
         }
     }
-    //función para retornar datos
+    //funcion para retornar datos
     public function retornarDatos($consulta){
-        try{
-            $datos = $this->con->query($consulta);
-            return $datos;
-        }catch(Exception $ex){
+        try {
+           $datos = $this->con->query($consulta);
+           return $datos;
+        } catch (Exception $ex) {
             echo $ex->getMessage();
         }
     }
-
-    //función para enviar datos
+    //funcion para enviar datos
     public function enviarDatos($consulta){
-        try{
+        try {
             $enviar = $this->con->query($consulta);
             if($enviar){
                 return true;
             }else{
                 return false;
             }
-        }catch(Exception $ex){
+        } catch (Exception $ex) {
             echo $ex->getMessage();
         }
     }
