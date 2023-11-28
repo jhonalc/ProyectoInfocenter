@@ -18,7 +18,7 @@ $consultaValidar = "SELECT fecha, hora From citasmedicas WHERE fecha = '{$fechaC
 $resValidar = $conexion->retornarDatos($consultaValidar);
 $array = null;
 $array = mysqli_fetch_array($resValidar);
-$horaSinSeg = date("H:i", strtotime($hora));
+$horaSinSeg = date("H:i", strtotime($horaCita));
 if ($array == null) {
     $consulta = "INSERT INTO citasmedicas(tipoMascota, nombreMascota, edad, idRaza, fecha, hora, nombreAmo, apellidoAmo, tipoIdentificacion, IdentificacionAmo)
     VALUES('{$tipoMascota}', '{$nombreMascota}','{$edadMascota}', '{$idRaza}', '{$fechaCita}', '{$horaCita}', '{$nombreAmo}','{$apellidoAmo}','{$tipoIdentificacion}','{$identificacionAmo}');";
@@ -29,7 +29,7 @@ if ($array == null) {
     } else {
         echo json_encode("0");
     }
-}else if($array["fecha"]==$fecha && date("H:i", strtotime($array["hora"])==$horaSinSeg)){
+}else if($array["fecha"]==$fechaCita && date("H:i", strtotime($array["hora"])==$horaSinSeg)){
     echo json_encode(("2"));
 }
 ?>
