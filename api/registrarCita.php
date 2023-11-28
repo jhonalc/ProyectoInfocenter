@@ -2,22 +2,26 @@
 require_once "conexion.php";
 $conexion = new Conexion();
 //Recibir los datos POST
-$mascota = $_POST["mascota"];
-$edad = $_POST["edad"];
+$tipoMascota = $_POST["tipoMascota"];
+$nombreMascota = $_POST["nombreMascota"];
+$edadMascota = $_POST["edadMascota"];
 $idRaza = $_POST["idRaza"];
-$fecha = $_POST["fecha"];
-$hora = $_POST["hora"];
-$amo = $_POST["amo"];
+$fechaCita = $_POST["fechaCita"];
+$horaCita = $_POST["horaCita"];
+$nombreAmo = $_POST["nombreAmo"];
+$apellidoAmo = $_POST["apellidoAmo"];
+$tipoIdentificacion = $_POST["tipoIdentificacion"];
+$identificacionAmo = $_POST["identificacionAmo"];
 
 //Validar si la cita existe
-$consultaValidar = "SELECT fecha, hora From citasmedicas WHERE fecha = '{$fecha}' AND hora = '{$hora}';";
+$consultaValidar = "SELECT fecha, hora From citasmedicas WHERE fecha = '{$fechaCita}' AND hora = '{$horaCita}';";
 $resValidar = $conexion->retornarDatos($consultaValidar);
 $array = null;
 $array = mysqli_fetch_array($resValidar);
 $horaSinSeg = date("H:i", strtotime($hora));
 if ($array == null) {
-    $consulta = "INSERT INTO citasmedicas(mascota, edad, idRaza, fecha, hora, amo)
-    VALUES('{$mascota}', '{$edad}', '{$idRaza}', '{$fecha}', '{$hora}', '{$amo}');";
+    $consulta = "INSERT INTO citasmedicas(tipoMascota, nombreMascota, edad, idRaza, fecha, hora, nombreAmo, apellidoAmo, tipoIdentificacion, IdentificacionAmo)
+    VALUES('{$tipoMascota}', '{$nombreMascota}','{$edadMascota}', '{$idRaza}', '{$fechaCita}', '{$horaCita}', '{$nombreAmo}','{$apellidoAmo}','{$tipoIdentificacion}','{$identificacionAmo}');";
 
     $res = $conexion->enviarDatos($consulta);
     if ($res == true) {
