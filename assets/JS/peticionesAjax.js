@@ -29,7 +29,8 @@ function getRazas(){
 function guardarCita(){
     //alert("haz presioando el botón");
     //validar campos
-    let tipoMascota = $("#tipoMascota").val();
+
+    let tipoMascota = $("#tipoMascota option:selected").text();
     if(tipoMascota === ""){
         alert("Por favor, Seleccione el tipo de mascota.");
         return;
@@ -70,13 +71,13 @@ function guardarCita(){
         alert("Por favor, ingrese el apellido del amo.");
         return;
     }
-    let tipoIdentificacion = $("#tipoIdentificacion").val();
+    let tipoIdentificacion = $("#tipoIdentificacion option:selected").text();
     if(tipoIdentificacion ===""){
         alert("Por favor, seleccione el tipo de Identificacion.");
         return;
     }
-    let IdentificacionAmo = $("#identificacionAmo").val();
-    if(IdentificacionAmo ===""){
+    let identificacionAmo = $("#identificacionAmo").val();
+    if(identificacionAmo ===""){
         alert("Por favor, ingrese el número de identificacion del amo.");
         return;
     }
