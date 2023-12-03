@@ -1,5 +1,6 @@
 @import url(cuidados.css);
 @import url(viajes.css);
+@import url(recetas.css);
 *{
     padding: 5px;
     margin: 5px;
@@ -75,6 +76,14 @@ text-decoration: underline;
 }
 .formularioCitas {
     width: 40%;
+}
+.videos{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+.videos .video1 .video2{
+    width: 50%;
 }
 footer{
     color: #111;
