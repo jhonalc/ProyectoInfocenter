@@ -1,0 +1,36 @@
+*{
+    padding: 5px;
+    margin: 5px;
+    box-sizing: border-box;
+}
+#principal{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+#cabecera{
+    display: flex;
+    justify-content: space-around;
+}
+#principal #title{
+    border-radius: 7px; 
+    background-color: whitesmoke; 
+    color: black; 
+    width: 100%; 
+    text-align: center; 
+    font-weight: bold; 
+    font-size: 20px;
+}
+#principal #servicios{
+    width: 32%;
+    height: 50vh;
+    border: solid black 2px; 
+    border-radius: 7px; 
+    display: flex; 
+    flex-wrap: wrap;
+    background-color: rgb(231, 205, 171);
+}
+#principal img{
+    display: flex;
+    justify-content: center;
+}
