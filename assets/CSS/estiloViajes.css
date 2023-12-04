@@ -1,0 +1,60 @@
+*{
+    padding: 5px;
+    margin: 5px;
+    box-sizing: border-box;
+}
+
+.divViajes{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+}
+
+/* ImagenPrincipal */
+.imgPrincipal{
+    display: flex;
+    width: 100%;
+    height: 80vh;
+    position: relative;
+}
+
+.imgPrincipal img{
+    width: 70%;
+    height: 300px;
+    display: block;
+    
+}
+
+.parrafo{
+    width: 60%;
+    position: absolute;
+    top: 167%;
+    background-color: antiquewhite;
+}
+
+
+/* Información */
+#vistaViajes{
+    width: 100%;
+    height: 900px;
+}
+
+#idViajes{
+    width: 100%;
+    height: 100vh;
+}
+
+.recuerdaViajes{
+    width: 50%;
+    height: 700px;
+    float: left;
+    
+}
+
+.imgRecuerda{
+    width: 45%;
+    height: 650px;
+    float: right;
+    
+}

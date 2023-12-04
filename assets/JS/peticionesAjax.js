@@ -29,7 +29,6 @@ function getRazas(){
 function guardarCita(){
     //alert("haz presioando el botón");
     //validar campos
-
     let tipoMascota = $("#tipoMascota option:selected").text();
     if(tipoMascota === ""){
         alert("Por favor, Seleccione el tipo de mascota.");
@@ -98,4 +97,72 @@ function guardarCita(){
     }).fail(function(error){
         console.log(error);
     });
+}
+
+function confirmarRegistro(){
+    alert("haz presionado el botón");
+    //validar campos
+    let tipo_mascota = $("#tipo_mascota option:selected").text();
+    if(tipo_mascota === ""){
+        alert("Por favor, ingrese el tipo de mascota.");
+        return;
+    }
+    let mascota = $("#mascota").val();
+    if(mascota === ""){
+        alert("Por favor, ingrese el nombre de la mascota.");
+        return;
+    }
+    let edad = $("#edad").val();
+    if(edad === ""){
+        alert("Por favor, ingrese la edad de la mascota.");
+        return;
+    }
+    let idRaza = document.getElementById("razas").value; // Id
+    if(idRaza === ""){
+        alert("Por favor, seleccione una raza.");
+        return;
+    }
+    let NombreAmo = $("#NombreAmo").val();
+    if(NombreAmo ===""){
+        alert("Por favor, ingrese el nombre del amo.");
+        return;
+    }
+    let ApellidoAmo = $("#ApellidoAmo").val();
+    if(ApellidoAmo ===""){
+        alert("Por favor, ingrese el apellido del amo.");
+        return;
+    }
+    let TipoIdentificacion = $("#TipoIdentificacion option:selected").text();
+    if(TipoIdentificacion===""){
+        alert("Por favor ingrese el tipo de documento de identificación.");
+        return;
+    }
+    let NumeroDocumento = document.getElementById("NumeroDocumento").value;
+    if(NumeroDocumento===""){
+        alert("Por favor ingrese el número de identificación.");
+        return;
+    }
+
+    //enviar datos
+    $.ajax({
+        method: "POST",
+        url: "../../api/registrarGuarderia.php",
+        dataType: "json",
+        data: {"tipo_mascota":tipo_mascota, "mascota":mascota, "edad":edad, "idRaza":idRaza, "NombreAmo":NombreAmo, "ApellidoAmo":ApellidoAmo, "TipoIdentificacion":TipoIdentificacion, "NumeroDocumento":NumeroDocumento}
+    }).done(function(respuesta){
+        if(respuesta == "1"){
+            alert("Registro exitoso");
+            let form = document.getElementById("formularioInscripcion");
+            form.reset();
+            $("#razas").val("").trigger("change.select2");
+        }else if(respuesta == "2"){
+            alert("La fecha y/o la hora seleccionada ya se encuentra registrada, por favor intente con otra fecha y/o hora");
+        }else{
+            alert("Error al registrar \nIntente mas tarde...");
+        }
+    }).fail(function(error){
+        console.log(error);
+    });    
+
+    
 }

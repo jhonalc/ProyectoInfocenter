@@ -1,0 +1,90 @@
+*{
+    padding: 5px;
+    margin: 5px;
+}
+/*Estilos para el bloque principal del Index*/
+.principalguarderia {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+       
+
+}
+/*Estilos para el carrusel -- traido desde bootstrap*/
+.carrusel h4{
+text-align: center;
+font-weight: bold;
+text-decoration: underline;
+}
+.tarjetasguarderia {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    justify-content: space-around;
+    align-items: center;
+    text-align: justify;
+}
+.imgguarderia{
+    width: 50%;
+    height: 50%;
+    float: right;
+    
+}
+#formularioInscripcion {
+    width: 35%;
+    background-color: #ccc;
+}
+
+.cuidadosguarderia{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 50%;
+    justify-content: center;
+    align-items: center;
+}
+
+.notasguarderia{
+    float: left;
+    width: 65%;
+}
+
+/* video y mapas */
+
+.contenedorvideos{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    align-items: center;
+}
+
+
+#videos{
+    width: 100%;
+}
+#videos h2{
+    text-align: center;
+}
+.video{
+    float:left;
+    width: 47%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 15px;
+    float: left;
+}
+
+
+.mapa{
+    float:left;
+    width: 47%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 15px;
+    float: right;
+}
