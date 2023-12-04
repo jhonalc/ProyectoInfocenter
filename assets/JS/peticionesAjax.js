@@ -24,7 +24,6 @@ function getRazas(){
         console.log(error);
     });
 }
- 
 //enviar datos base de datos (regsitrar cita medica)
 function guardarCita(){
     //alert("haz presioando el botón");
@@ -98,9 +97,8 @@ function guardarCita(){
         console.log(error);
     });
 }
-
 function confirmarRegistro(){
-    alert("haz presionado el botón");
+    alert("has presionado el botón");
     //validar campos
     let tipo_mascota = $("#tipo_mascota option:selected").text();
     if(tipo_mascota === ""){
@@ -142,7 +140,6 @@ function confirmarRegistro(){
         alert("Por favor ingrese el número de identificación.");
         return;
     }
-
     //enviar datos
     $.ajax({
         method: "POST",
@@ -154,7 +151,7 @@ function confirmarRegistro(){
             alert("Registro exitoso");
             let form = document.getElementById("formularioInscripcion");
             form.reset();
-            $("#razas").val("").trigger("change.select2");
+            //$("#razas").val("").trigger("change.select2");
         }else if(respuesta == "2"){
             alert("La fecha y/o la hora seleccionada ya se encuentra registrada, por favor intente con otra fecha y/o hora");
         }else{
@@ -162,7 +159,5 @@ function confirmarRegistro(){
         }
     }).fail(function(error){
         console.log(error);
-    });    
-
-    
+    });
 }
